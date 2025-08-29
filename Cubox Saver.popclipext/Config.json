@@ -1,25 +1,25 @@
 {
-  "name": "DinoAI Saver",
-  "identifier": "cc.dinoai.popclip.saver.v1.0",
-  "description": "Save selected text to DinoAI with one click",
+  "name": "Universal Saver",
+  "identifier": "cc.universal.popclip.saver.v1.0",
+  "description": "Save selected text to any service with API",
   "app": {
-    "name": "DinoAI Saver",
-    "link": "https://dinoai.chatgo.pro"
+    "name": "Universal Saver",
+    "link": "https://github.com/liujie2016/cubox-popclip-extension"
   },
   "popclipVersion": 4155,
   "entitlements": ["network"],
   "options": [
     {
       "identifier": "apiUrl",
-      "label": "DinoAI API URL",
+      "label": "API URL",
       "type": "string",
-      "description": "Your DinoAI API URL (e.g. https://dinoai.chatgo.pro/openapi/text/input)",
+      "description": "Your API URL (e.g. https://dinoai.chatgo.pro/openapi/text/input)",
       "defaultValue": "https://dinoai.chatgo.pro/openapi/text/input"
     }
   ],
   "actions": [
     {
-      "title": "Save to DinoAI",
+      "title": "Save to API Service",
       "icon": "icon.svg",
       "requirements": ["text"],
       "javascript file": "action.js"

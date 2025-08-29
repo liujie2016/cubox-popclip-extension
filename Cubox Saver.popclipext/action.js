@@ -1,6 +1,6 @@
-// DinoAI Saver for PopClip
+// Universal Saver for PopClip
 // Version: 1.0
-// Save selected text to DinoAI service
+// Save selected text to any service with API
 // Based on PopClip official documentation: https://www.popclip.app/dev/js-actions
 // Script entry point at top level - PopClip wraps this in an async function
 
@@ -22,7 +22,7 @@ if (!url) {
 var text = popclip.input.text.trim();
 
 // Show progress
-popclip.showText('📋 Saving to DinoAI...');
+popclip.showText('📋 Saving to API Service...');
 
 // Prepare data for DinoAI
 var data = {
@@ -40,7 +40,7 @@ try {
         if (request.readyState === 4) {
             var status = request.status;
             if (status >= 200 && status < 300) {
-                popclip.showText('✅ Saved to DinoAI!');
+                popclip.showText('✅ Saved!');
             } else if (status === 401 || status === 403) {
                 popclip.showText('❌ Authentication failed');
             } else if (status === 0) {
