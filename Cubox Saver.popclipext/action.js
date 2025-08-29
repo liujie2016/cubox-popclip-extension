@@ -15,11 +15,12 @@ var url = popclip.options.apiUrl || 'https://dinoai.chatgo.pro/openapi/text/inpu
 url = url.trim();
 
 if (!url) {
-    popclip.showText('⚠️ Please set DinoAI API URL in settings');
+    popclip.showText('⚠️ Please set API URL in settings');
     return;
 }
 
 var text = popclip.input.text.trim();
+var apiKey = popclip.options.apiKey;
 
 // Show progress
 popclip.showText('📋 Saving to API Service...');
@@ -34,7 +35,9 @@ try {
     var request = new XMLHttpRequest();
     request.open('POST', url, true); // Use async request
     request.setRequestHeader('Content-Type', 'application/json');
-    request.setRequestHeader('Authorization', 'token'); // Placeholder for token
+    if (apiKey) {
+        request.setRequestHeader('Authorization', apiKey);
+    }
     
     request.onreadystatechange = function() {
         if (request.readyState === 4) {
