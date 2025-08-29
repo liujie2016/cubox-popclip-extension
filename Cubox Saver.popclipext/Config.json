@@ -14,7 +14,7 @@
       "label": "API URL",
       "type": "string",
       "description": "Your API URL (e.g. https://dinoai.chatgo.pro/openapi/text/input)",
-      "defaultValue": "https://dinoai.chatgo.pro/openapi/text/input"
+      "defaultValue": "https://aisdk.chatgo.pro/api/note/create"
     },
     {
       "identifier": "apiKey",
